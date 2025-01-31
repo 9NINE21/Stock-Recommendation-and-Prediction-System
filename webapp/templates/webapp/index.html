@@ -1,0 +1,23 @@
+{% extends "webapp/base.html" %}
+
+{% block title %}Welcome to Stock App{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="container py-3">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h1 class="display-6 mb-4">Welcome to Stock Market Recommendation and Prediction App</h1>
+            <p class="lead mb-5">Get personalized stock recommendations and predict prices effortlessly.</p>
+            
+            <!-- Stock Image -->
+            <img src="static/images/people.jpg" alt="Stock Market" class="img-fluid mb-4 rounded-3" style="max-width: 100%;">
+
+            <div class="d-flex justify-content-center gap-3">
+                <a href="{% url 'register' %}" class="btn btn-lg btn-success">Register</a>
+                <a href="{% url 'my-login' %}" class="btn btn-lg btn-outline-dark">Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

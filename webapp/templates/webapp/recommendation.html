@@ -1,0 +1,50 @@
+{% extends 'webapp/base.html' %}
+
+{% block title %}
+recommendations no-results
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Recommended Stocks</h1>
+    <div class="row">
+        {% for stock in stocks %}
+        <div class="col-md-6 col-lg-6 mb-4">
+            <div class="card h-100 shadow-sm custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ stock.Security_Name }}</h5>
+                    <p class="card-text">
+                        <strong>Symbol: </strong> <a href="{% url 'prediction' symbol=stock.Symbol %}">{{ stock.Symbol }}</a><br>
+                        <strong>Security Id: </strong> {{ stock.Security_Id }}<br>
+                        {% if stock.Sector == "CommercialBanks" %}
+                            <strong>Sector: </strong>Commercial Bank<br>
+                        {% elif stock.Sector == "DevelopmentBanks" %}
+                            <strong>Sector: </strong>Development Bank<br>
+                        {% elif stock.Sector == "Finance" %}
+                            <strong>Sector: </strong> Finance<br>
+                        {% endif %}
+                        <strong>Price: </strong> Rs. {{ stock.Price }}<br>
+                        <strong>Cash Dividend: </strong> {{ stock.Cash_Dividend }} %<br>
+                        <strong>52 Week High: </strong> Rs. {{ stock.Fifty_Two_Week_High }}<br>
+                        <strong>52 Week Low: </strong> Rs. {{ stock.Fifty_Two_Week_Low }}<br>
+                        <strong>Market Cap Category: </strong> {{ stock.Cap_Category }}<br>
+                        <strong>Market Value: </strong> Rs. {{ stock.Market_Capitalization }} millions<br>
+                    </p>
+                    <h6 class="mt-3">Why This Stock?</h6>
+                    <p class="text-muted">{{ stock.explanation }}</p>
+                    <form action="{% url 'prediction' symbol=stock.Symbol%}" method="POST" class="w-100 mt-3">
+                        {% csrf_token %}
+                        <input type="hidden" name="submission_id" value="{{ submission_id }}">
+                        <button type="submit" class="btn btn-primary w-100 mt-3 shadow" style="transition: all 0.3s ease;">
+                            Predict the Stock Price
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

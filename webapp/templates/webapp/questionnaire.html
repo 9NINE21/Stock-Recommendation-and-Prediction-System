@@ -1,0 +1,162 @@
+{% extends 'webapp/base.html' %}
+{% block title %}
+Questionnaire
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Stock Investment Preferences Questionnaire</h1>
+
+    <!-- Form -->
+    <form method="POST" id="investmentForm">
+        {% csrf_token %}
+
+        <!-- Question 1 -->
+        <div class="question">
+            <label>1. Which category of stocks do you prefer based on market capitalization?</label>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">📈</span>
+                <strong>Large-cap</strong>
+                <div class="description">Stable, well-established companies with lower risk.</div>
+                <input type="radio" name="market_cap" value="Largecap">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">📊</span>
+                <strong>Mid-cap</strong>
+                <div class="description">Balanced risk and growth potential.</div>
+                <input type="radio" name="market_cap" value="Midcap">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">🚀</span>
+                <strong>Small-cap</strong>
+                <div class="description">Higher risk with potential for significant growth.</div>
+                <input type="radio" name="market_cap" value="Smallcap">
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <label>2. What is your planned initial investment amount?</label>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">💵</span>
+                <strong>Less than NPR 25,000</strong>
+                <div class="description">Ideal for beginners or conservative investors.</div>
+                <input type="radio" name="investment_amount" value="Low-Price">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">💰</span>
+                <strong>NPR 25,000 – NPR 40,000</strong>
+                <div class="description">Moderate investment for balanced growth.</div>
+                <input type="radio" name="investment_amount" value="Mid-Price">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">💎</span>
+                <strong>More than NPR 40,000</strong>
+                <div class="description">For experienced investors seeking higher returns.</div>
+                <input type="radio" name="investment_amount" value="High-Price">
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <label>3. Do you prefer investing in stocks with high growth potential or undervalued stocks with stable returns?</label>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">📈</span>
+                <strong>High Growth Potential</strong>
+                <div class="description">Focus on companies with rapid growth prospects.</div>
+                <input type="radio" name="investment_preference" value="HighGrowthPotential">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">🛡️</span>
+                <strong>Undervalued with Stable Returns</strong>
+                <div class="description">Invest in undervalued stocks with consistent performance.</div>
+                <input type="radio" name="investment_preference" value="UndervaluedwithStableReturns">
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <label>4. How would you describe your risk appetite for investing?</label>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">🛡️</span>
+                <strong>Low</strong>
+                <div class="description">Prefer stable, low-volatility stocks.</div>
+                <input type="radio" name="risk_appetite" value="Low">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">⚖️</span>
+                <strong>Moderate</strong>
+                <div class="description">Willing to accept some risk for potential returns.</div>
+                <input type="radio" name="risk_appetite" value="Moderate">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">🚀</span>
+                <strong>High</strong>
+                <div class="description">Comfortable with high risk for higher returns.</div>
+                <input type="radio" name="risk_appetite" value="High">
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <label>5. What is your preferred investment duration?</label>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">⏳</span>
+                <strong>Short-term Investment (1-2 years)</strong>
+                <div class="description">Focus on quick returns.</div>
+                <input type="radio" name="investment_duration" value="Shortterm">
+            </div>
+            <div class="option-card" onclick="selectOption(this)">
+                <span class="icon">📅</span>
+                <strong>Long-term Investment (more than 2 years)</strong>
+                <div class="description">Invest for long-term growth and stability.</div>
+                <input type="radio" name="investment_duration" value="Longterm">
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-submit">Submit</button>
+    </form>
+
+</div>
+
+<script>
+    document.getElementById('investmentForm').addEventListener('submit', function (e) {
+        // List of question names to validate
+        const questions = [
+            { name: 'market_cap', label: 'Category of banks based on market capitalization' },
+            { name: 'investment_amount', label: 'Initial investment amount' },
+            { name: 'investment_preference', label: 'Investment preference' },
+            { name: 'risk_appetite', label: 'Risk appetite' },
+            { name: 'investment_duration', label: 'Investment duration' }
+        ];
+
+        
+        let unansweredQuestions = [];
+
+        questions.forEach(question => {
+            const options = document.getElementsByName(question.name);
+            const isChecked = Array.from(options).some(option => option.checked);
+            
+            if (!isChecked) {
+                unansweredQuestions.push(question.label);
+            }
+        });
+
+        if (unansweredQuestions.length > 0) {
+            // Prevent form submission and show a single alert with all missing questions
+            e.preventDefault();
+            alert(`Please answer all the questions!! `);
+        }
+    });
+
+
+    function selectOption(card) {
+            const options = card.parentElement.querySelectorAll('.option-card');
+            options.forEach(opt => opt.classList.remove('selected'));
+            card.classList.add('selected');
+            card.querySelector('input[type="radio"]').checked = true;
+        }
+</script>
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'webapp/base.html' %}
+
+{% block title %}
+Prediction
+{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center mt-2">
+
+<div class="col-md-4 col-lg-4 mb-4 mx-3">
+    <div class="card h-100 shadow border-0">
+        <div class="card-header bg-primary text-white text-center ">
+            <h5 class="mb-0">{{ stock.Security_Name }}</h5>
+        </div>
+        <div class="card-body">
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Symbol:</strong></div>
+                <div class="col-6 text-end">{{ stock.Symbol }}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Security ID:</strong></div>
+                <div class="col-6 text-end">{{ stock.Security_Id }}</div>
+            </div>
+            
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Sector:</strong></div>
+                {% if stock.Sector == "CommercialBanks" %}
+                <div class="col-6 text-end">Commercial Bank</div>
+                {% elif stock.Sector == "DevelopmentBanks" %}
+                <div class="col-6 text-end">Development Bank</div>
+                {% elif stock.Sector == "Finance" %}
+                <div class="col-6 text-end">Finance</div>
+                {% endif %}
+            </div>
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Price:</strong></div>
+                <div class="col-6 text-end">Rs. {{ stock.Price }}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Cash Dividend:</strong></div>
+                <div class="col-6 text-end">{{ stock.Cash_Dividend }} %</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>52 Week High:</strong></div>
+                <div class="col-6 text-end">Rs. {{ stock.Fifty_Two_Week_High }}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>52 Week Low:</strong></div>
+                <div class="col-6 text-end">Rs. {{ stock.Fifty_Two_Week_Low }}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Cap Category:</strong></div>
+                <div class="col-6 text-end">
+                    <span class="badge bg-success">{{ stock.Cap_Category }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-muted"><strong>Market Value:</strong></div>
+                <div class="col-6 text-end">Rs. {{ stock.Market_Capitalization }} millions</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Right Column (Forecast Summary) -->
+<div class="col-md-4 mx-3">
+    <div class="card h-100 shadow-sm border-0" style="max-width: 350px; max-height: 200px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h5 class="mb-0">Forecast Summary (Next 40 Days)</h5>
+        </div>
+        <div class="card-body">
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Max Forecasted Price:</strong></div>
+                <div class="col-6 text-end">Rs. {{ summary.high }}</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-6 text-muted"><strong>Median Forecasted Price:</strong></div>
+                <div class="col-6 text-end">Rs. {{ summary.median }}</div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-muted"><strong>Min Forecasted Price:</strong></div>
+                <div class="col-6 text-end">Rs. {{ summary.low }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<div class="container py-5">
+            <div class="text-center mb-4">
+                <h1 class="display-5 fw-bold">Stock Price and Forecast for {{ stock_symbol }}</h1>
+            </div>
+            <div class="card shadow-lg border-0" style="max-width: 1200px; margin: 0 auto;">
+                <div class="card-body">
+                    <div class="mx-auto" style="width: 100%; max-width: 100%;">
+                        <!-- Render the Plotly graph -->
+                        {{ graph_html|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>  
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+Security_Id,Symbol,Security_Name,Sector,Price,Fifty_Two_Week_High,Fifty_Two_Week_Low,Market_Capitalization,Volatility,Cap_Category,Investment_Planning,Budget,Returns,Cash_Dividend
+397,ADBL,Agricultural Development Bank Limited,CommercialBanks,302.1,428.4,223,41856.63,Medium,Smallcap,Longterm,Mid-Price,UndervaluedwithStable returns,7.53
+348,CZBIL,Citizens Bank International Limited,CommercialBanks,215.5,296,152.5,31832.03,High,Smallcap,Shortterm,Low-Price,Highgrowthpotential,0.21
+137,EBL,Everest Bank Limited,CommercialBanks,593,790,480,76762.03,Low,Largecap,Longterm,Mid-Price,UndervaluedwithStable returns,5.53
+341,GBIME,Global IME Bank Limited,CommercialBanks,223,302,170,84998.35,Medium,Largecap,Longterm,Low-Price,Highgrowthpotential,0.00
+134,HBL,Himalayan Bank Limited,CommercialBanks,239.8,312.1,167.1,51932.56,Medium,Midcap,Shortterm,Low-Price,UndervaluedwithStablereturns,11.11
+142,KBL,Kumari Bank Limited,CommercialBanks,211.5,272.9,129.6,55467.7,Medium,Midcap,Longterm,Low-Price,UndervaluedwithStablereturns,12.50
+141,LSL,Laxmi Sunrise Bank Limited,CommercialBanks,217.6,300,143.6,52978.01,Medium,Midcap,Shortterm,Low-Price,UndervaluedwithStablereturns,0.26
+140,MBL,Machhapuchhre Bank Limited,CommercialBanks,234.5,295,157.8,27252.08,High,Smallcap,Longterm,Low-Price,UndervaluedwithStablereturns,0.70
+131,NABIL,Nabil Bank Limited,CommercialBanks,495.5,700,419,134067.42,High ,Largecap,Longterm,High-Price,Undervalued growth potential,10.00
+517,NBL,Nepal Bank Limited,CommercialBanks,263.8,337.5,195.1,38762.83,Medium,Smallcap,Shortterm,Mid-Price,Highgrowthpotential,10.00
+139,NICA,NIC Asia Bank Ltd.,CommercialBanks,383.4,573,341.6,57193.95,Medium,Midcap,Shortterm,Mid-Price,Highgrowthpotential,1.52
+132,NIMB,Nepal Investment Mega Bank Limited,CommercialBanks,216,295,147.4,73717.76,Medium,Midcap,Longterm,Low-Price,UndervaluedwithStablereturns,0.00
+238,NMB,NMB Bank Limited,CommercialBanks,239.8,300,162,44043.36,Medium,Smallcap,Longterm,Low-Price,UndervaluedwithStablereturns,8.25
+357,PCBL,Prime Commercial Bank Ltd.,CommercialBanks,251,329,186,48700.46,Medium,Smallcap,Longterm,Mid-Price,UndervaluedwithStablereturns,5.00
+255,PRVU,Prabhu  Bank Limited,CommercialBanks,223.8,297,132,52688.09,High,Midcap,Shortterm,Low-Price,Highgrowthpotential,1.50
+171,SANIMA,Sanima Bank Limited,CommercialBanks,294.5,382,228,39997.59,Low,Smallcap,Longterm,Mid-Price,Highgrowthpotential,5.27
+135,SBI,Nepal SBI Bank Limited,CommercialBanks,429.5,549,268.6,46811.88,Low,Smallcap,Shortterm,High-Price,Highgrowthpotential,6.85
+145,SBL,Siddhartha Bank Limited,CommercialBanks,299,380,212.2,42129.04, Low,Smallcap,Shortterm,Mid-Price,Highgrowthpotential,4.00
+133,SCB,Standard Chartered Bank Limited,CommercialBanks,677,790,497.4,67986.83,Low,Midcap,Longterm,High-Price,UndervaluedwithStablereturns,19.00
+450,CORBL,Corporate Development Bank Limited,DevelopmentBanks,1699,1920,359,8489.25,High,Smallcap,Shortterm,High-Price,Highgrowthpotential,0.26
+274,EDBL,Excel Development Bank Ltd.,DevelopmentBanks,608,774,331,7410.68,Low,Smallcap,Longterm,Mid-Price,UndervaluedwithStablereturns,0.45
+417,GBBL,Garima Bikas Bank Limited,DevelopmentBanks,397,531,350,21699.57,Medium,Largecap,Longterm,Low-Price,UndervaluedwithStablereturns,5.00
+2744,GRDBL,Green Development Bank Ltd.,DevelopmentBanks,1215,1305,323,6458.73,High,Smallcap,Longterm,High-Price,Highgrowthpotential,0.30
+418,JBBL,Jyoti Bikas Bank Limited,DevelopmentBanks,372,445,275,15174.25,Medium,Midcap,Shortterm,Low-Price,UndervaluedwithStablereturns,3.80
+459,KSBBL,Kamana Sewa Bikas Bank Limited,DevelopmentBanks,437,564.8,330,14917.58,High,Midcap,Shorterm,Low-Price,Highgrowthpotential,5.00
+358,LBBL,Lumbini Bikas Bank Ltd.,DevelopmentBanks,466,560,361,17502.43,Low,Midcap,Shortterm,Low-Price,UndervaluedwithStablereturns,4.00
+401,MLBL,Mahalaxmi Bikas Bank Ltd.,DevelopmentBanks,380,498,308,15810.96,Medium,Midcap,Longterm,Low-Price,UndervaluedwithStablereturns,4.00
+371,MDB,Miteri Development Bank Limited,DevelopmentBanks,665,843.5,375,7789.43,High,Smallcap,Longterm,Mid-Price,Highgrowthpotential,0.50
+474,MNBBL,Muktinath Bikas Bank Ltd.,DevelopmentBanks,372,482,332,25969.06,Moderate,Largecap,Longterm,Low-Price,UndervaluedwithStablereturns,0.51
+172,NABBC,Narayani Development Bank Limited,DevelopmentBanks,968,1483,390.1,3359.58,Low,Smallcap,Shortterm,High-Price,Highgrowthpotential,0.00
+2860,SAPDBL,Saptakoshi Development Bank Ltd,DevelopmentBanks,1150,1292.3,242.1,9953.65,High,Smallcap,Shorterm,High-Price,Highgrowthpotential,0.00
+472,SADBL,Shangrila Development Bank Ltd.,DevelopmentBanks,400,497,285,13652,High,Midcap,Shortterm,Low-Price,Highgrowthpotential,0.19
+473,SHINE,Shine Resunga Development Bank Ltd.,DevelopmentBanks,420,625,353,19892.86,Medium,Largecap,Longterm,Low-Price,UndervaluedwithStablereturns,5.00
+561,SINDU,Sindhu Bikash Bank Ltd,DevelopmentBanks,1099,1130,282,6092.99,Medium,Smallcap,Longterm,Mid-Price,UndervaluedwithStablereturns,0.26
+227,BFC,Best Finance Company Ltd.,Finance,682,951.6,310,5565.87,Low,Midcap,Shorterm,Mid-Price,UndervaluedwithStablereturns,0.00
+245,CFCL,Central Finance Co. Ltd.,Finance,630,820,318,5390.56,Medium,Midcap,Shortterm,Mid-Price,Highgrowthpotential,5.00
+232,GFCL,Goodwill Finance Limited,Finance,830,1353,419,6848.92,Medium,Largecap,Longterm,Mid-Price,Highgrowthpotential,3.90
+263,GMFIL,Guheshowori Merchant Bank & Finance Co. Ltd.,Finance,570,759,333,4990.02,High,Midcap,Shortterm,Low-Price,Highgrowthpotential,0.34
+204,GUFL,Gurkhas Finance Ltd.,Finance,675.1,1041,536.1,5433.64,High,Midcap,Longterm,Mid-Price,Highgrowthpotential,0.00
+273,ICFC,ICFC Finance Limited,Finance,685,910,462,7550.54,Low,Largecap,Longterm,Mid-Price,Highgrowthpotential,5.26
+250,JFL,Janaki Finance Company Limited,Finance,714,1083.3,350,4059.98,High,Smallcap,Shortterm,Mid-Price,UndervaluedwithStablereturns,0.78
+516,MFIL,Manjushree Finance Ltd.,Finance,672,917,480.2,8555.32,Low,Largecap,Longterm,Mid-Price,Highgrowthpotential,6.35
+471,MPFL,Multipurpose Finance Company  Limited,Finance,709,936.9,328,3947.99,High,Smallcap,Shortterm,Mid-Price,Highgrowthpotential,0.68
+194,NFS,Nepal Finance Ltd.,Finance,978,2614.9,316.1,5814.13,High,Midcap,Shortterm,High-Price,Highgrowthpotential,1.16
+236,PFL,Pokhara Finance Ltd.,Finance,550,795,342.1,4719.94,High,Midcap,Longterm,Low-Price,Highgrowthpotential,0.21
+338,PROFL,Progressive Finance Limited,Finance,626,865,295,4835.05,Medium,Midcap,Longterm,Mid-Price,UndervaluedwithStablereturns,0.31
+587,RLFL,Reliance Finance Ltd.,Finance,603,838,339,6078.26,High,Midcap,Shortterm,Mid-Price,UndervaluedwithStablereturns,0.34
+256,SFCL,Samriddhi Finance Company Limited,Finance,696,1117.9,293,5003.54,High,Midcap,Shortterm,Mid-Price,UndervaluedwithStablereturns,0.00
+244,SIFC,Shree Investment Finance Co. Ltd.,Finance,597.1,795,336.2,5450,Medium,Midcap,Shortterm,Mid-Price,Highgrowthpotential,0.09
