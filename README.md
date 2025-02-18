@@ -5,6 +5,7 @@ Semantic Search on Recommendation System - The system uses a cosine similarity a
 Prediction System -  The TFT model is a powerful tool for multihorizon and multivariate time series forecasting, leveraging self-attention to capture complex temporal patterns across multiple time sequences.
 
 
-<img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/13tOXba8H16f16TPQL8y1Z5Rw.png" alt="Stock Prediction Model" width="300"/>
+![image](https://github.com/user-attachments/assets/781e3418-d3f5-48a6-a174-98fb956c5071)
+
 
 
